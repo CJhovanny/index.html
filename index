@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        
+        $("#add").click(function(){
+        
+            var tds=$("#tabla tr:first td").length;
+        
+            var trs=$("#tabla tr").length;
+            var nuevaFila="<tr>";
+            nuevaFila+="<td>"+(trs+0)+"";
+            nuevaFila+="<td><input type='text' name='c0'></td>";
+            nuevaFila+="<td><input type='text' name='c1'></td>";
+            nuevaFila+="<td><input type='text' name='c2'></td>";
+            nuevaFila+="<td><input type='text' name='c3'></td>";
+            for(var i=0;i<tds;i++){
+            }
+           
+            nuevaFila+="</tr>";
+            $("#tabla").append(nuevaFila);
+        });
+ 
+        $("#del").click(function(){
+    
+            var trs=$("#tabla tr").length;
+            if(trs>1)
+            {
+                $("#tabla tr:last").remove();
+            }
+        });
+    });
+    </script>
+
+
+    <center>
+                <table>
+                    <tr>
+                        <td>
+                        <input type="text" id="b0" placeholder="El nombre de tu base de datos va aquí..." />
+                        <input type="submit" id="limpiar" value="GENERAR" /> 
+                        <br>
+                        <br>
+                        <br>
+                        </td>
+                  </tr>
+               </table>
+
+        <table id="tabla">
+        <tr>
+            <td>Orden</td>
+            <td>Nombre de la columna</td>
+            <td>Tipo de dato</td>
+            <td>Ejemplo</td>
+            <td>Opciones</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="text" name="b1"></td>
+            <td>Tipo de dato</td>
+            <td>Ejemplo</td>
+            <td>Opciones</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input type="text" name="b2"></td>
+            <td>Tipo de dato</td>
+            <td>Ejemplo</td>
+            <td>Opciones</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><input type="text" name="b3"></td>
+            <td>Tipo de dato</td>
+            <td>Ejemplo</td>
+            <td>Opciones</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><input type="text" name="b4"></td>
+            <td>Tipo de dato</td>
+            <td>Ejemplo</td>
+            <td>Opciones</td>
+        </tr>
+    </table>
+    <div id="add">AGREGAR</div>
+<div id="del">ELIMINAR</div>
+           </center>
+    
+</head>
+ 
+<body>
+    <font face="SourceSansPro-ExtraLight">
+<center>
+   <div id="tabla1"> 
+   <div id="cabtab1"> 
+   <font size="6">Generar datos</font>
+   </div> 
+        <div id="cuerpotab1"> 
+            <br>
+            <br>
+            <br>
+            <input type="text" name="">
+            
+                </div>
+            </center>
+        </font>
+        </body>
+</html>
